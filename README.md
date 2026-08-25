@@ -1,8 +1,8 @@
 # STM32F103C8T6 Battery Voltage Monitor
 
-A software-based battery voltage monitoring system implemented on the **STM32F103C8T6 (Blue Pill)**. The project measures battery voltage through an analog voltage divider and provides battery status through LEDs and UART output.
+A software-based battery voltage monitoring system implemented on the STM32F103C8T6 (Blue Pill). The project measures battery voltage through an analog voltage divider and provides battery status through LEDs and UART output.
 
-This improved implementation replaces the original ADC polling approach with **timer interrupts, ADC Normal DMA, UART interrupts, and an Independent Watchdog (IWDG)** while maintaining the same core functionality.
+The firmware uses timer interrupts, ADC with Normal DMA, UART interrupts, and an Independent Watchdog (IWDG) to implement a reliable interrupt-driven battery monitoring system while maintaining the core voltage measurement and battery status functionality.
 
 ## Features
 
@@ -194,8 +194,6 @@ TIM2 is configured to generate an approximately 1-second periodic interrupt.
 - Tera Term
 - GitHub
 
-The firmware was developed and programmed without relying on a hardware debugger.
-
 ## Project Structure
 
 ```text
@@ -238,7 +236,7 @@ Possible future extensions include:
 - Coulomb counting
 - More accurate battery SOC estimation
 - Low-voltage protection
-- Flash/EEPROM data logging
+- External EEPROM/Flash data logging
 - PC-based graphical monitoring
 
 ## Author
